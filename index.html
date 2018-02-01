@@ -1,64 +1,130 @@
-<!Doctype <!DOCTYPE html>
-<html>
+<<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ram's Bio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Page</title>
+    <link href="bootstrap.min.css" rel="stylesheet">  
+    <link href="bootstrap-grid.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
 </head>
 <body>
-    
-    <h1>Ram</h1>
-    <img src="image1.jpg" alt="oops image not found" width="900">
-    <p><em>image of the year</em></p>
-    <p>My name is Ram. I work at UC Berkeley. I am 6'3 tall giant</p>
-    <p>Buy me coffee and sandwich</p>
-    <ul>
-    <li><a href="https://linkedin.com" target="_blank">professional link</a></li>
-    <li><b><a href= "https://facebook.com" >social link</b> </a></li>
-    </ul>
+    <!-- <h1> Latitude vs x </h1>
+    <img src="image/Temperature_v_Lattitude.png" width="500">
+    <img src="image/Latitude vs Wind_speed.png" width="500">
+    <img src="image/latitude vs humidity.png" width="500">
+    <img src="image/Latitude vs Cloudliness.png" width="500"> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-head-foot fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="landingPage.html">Lattitude Analysis</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+  
+              <li class="nav-item active navbar-right dropdown">
+                  <a class="nav-link dropdown-toggle" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown03">
+                    <a class="dropdown-item" href="lat_climate.html">Lattitude v. Temperature</a>
+                    <a class="dropdown-item" href="lat_humidity.html">Lattitude v. Humidity</a>
+                    <a class="dropdown-item" href="lat_cloud.html">Lattitude v. Cloudiness</a>
+                    <a class="dropdown-item" href="lat_wind.html">Lattitude v. Wind Speed</a>
+                  </div>
+              </li>
+  
+              <li class="nav-item active">
+                <a class="nav-link" href="comparison.html">Comparison</a>
+              </li>
+  
+              <li class="nav-item active">
+                <a class="nav-link" href="data.html">Data</a>
+              </li>
+  
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
 
-    <table border="1">
-        <thead>
-            <tr>
-            <th colspan="4">Personal Data </th>
-        </tr>
-        <tr>
-            <th>Movies</th>
-            <th>Songs</th>
-            <th>Books</th>
-        </tr>   
-    </thead> 
-        <tr>
-            <td>Darkest Hour</td>
-            <td>Slide</td>
-            <td>Blah</td>
-        </tr>
-        <tr>
-                <td>South-east</td>
-                <td>Ashley</td>
-                <td>yay</td>
-            </tr>
-            <tr>
-    <!-- <h2>how to make a sandwich</h2>
-    <ol>
-            <li>Take bread</li>
-            <li>Spread the butter</li>
-            <li>Take Apple butter & spread it</li>
-            <li>Wallah!!!</li>
-          </ol>
+        <!-- Index page heading -->
+        <h1 class="my-4">Summary: 
+          <small>Lattitude vs. Weather</small>
+        </h1>
+        <hr>
+  
+        <!-- Index page content -->
+        <div class="row">
+  
+          <div class="col-md-8">
+            <img class="img-fluid" src="image/Temperature_v_Lattitude.png" alt="">
+          </div>
+  
+          <div class="col-md-4">
+  
+              <p>
+                  The purpose of this of this project is to compare latitude versus different weather conditions,
+                  cloudliness, humidity, and wind speed
+              </p>
+              <p>
+                  Some of the packages and API used are citipy pyton package to gather a sample of city names and their geographic coordinates 
+                  and OpenWeatherMap API which contains realtime weather data.
+              </p>
+              <p>
+                  The data was then converted to a dataframe using pandas from which plots were created using different relationships like 
+                  Temperature, Humidity, Cloudiness, and Wind Speed vs the respective city lattitudes. 
+              </p>
+          
+          </div>
+  
+        </div>
 
-    <h3>Music band</h3>
-    <ul>
-        <li>Lamar</li>
-        <li> Bruno</li>
-    </ul>
-    <iframe width="420" height="315"
-    src="https://www.youtube.com/embed/watch?v=3BXDsVD6O10">
-    </iframe> -->
+        <h3 class="my-4">Visualizations</h3>
+      <hr>
+      <div class="row">
 
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="lat_climate.html">
+            <img class="img-fluid" src="image/Temperature_v_Lattitude.png" alt="">
+          </a>
+        </div>
 
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="lat_wind.html">
+            <img class="img-fluid" src="image/Latitude vs Wind_speed.png" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="lat_humidity.html">
+            <img class="img-fluid" src="image/latitude vs humidity.png" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="lat_cloud.html">
+            <img class="img-fluid" src="image/Latitude vs Cloudliness.png" alt="">
+          </a>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- <footer class="py-4 bg-head-foot">
+        <div class="container">
+          <p class="m-0 text-center text-white">By Sharath Ram Srinivasan</p>
+        </div>
+        <!-- /.container -->
+      <!-- </footer> --> 
+  
+      <!-- Bootstrap core JavaScript -->
+      <script src="jquery.min.js"></script>
+      <script src="bootstrap.bundle.min.js"></script>
+  
+    </body>
+  
 </body>
 </html>
